@@ -1,0 +1,75 @@
+{% extends 'home.html' %}
+{% block body %}
+
+<html>
+
+<body class="body-container">
+
+    {% include 'menu_hz.html' %}
+
+    <div id="mheader">
+        <div class="d-flex flex-column">
+
+
+            <!-------Menu usuario--------->
+            {% include 'menu_profile.html' %}
+            <!-------Menu usuario FIN--------->
+
+
+            <!-------Menu sesion--------->
+            {% include 'menu_sesion.html' %}
+            <!-------Menu sesion FIN--------->
+
+
+
+            {% include 'menu_ver.html' %}
+        </div>
+    </div>
+    <!-- ======= Fondo Section y Content ======= -->
+    <!-- ======= Fondo Section y Content ======= -->
+    <div id="hero" class="d-flex flex-column justify-content-center align-items-center">
+        <main>
+
+            {% block content %}
+
+            {% endblock %}
+        </main>
+
+        <div class="hero-container" data-aos="fade-in"></div>
+    </div>
+    <!-- ======= Fondo Section y Content ======= -->
+    <!-- ======= Fondo Section y Content ======= -->
+
+
+
+
+    {% include 'footer.html' %}
+
+
+
+
+    {% block javascript %}
+    {% endblock %}
+
+
+    <!---------------------ERROR DE SESSION----------------------------->
+    {% if messages %}
+    <script> var html = '<p>';</script>
+    {% for message in messages %}
+    <script> html += '{{ message }}'</script>
+    {% endfor %}
+    <script> html += '<p>';</script>
+    <script>
+        Swal.fire({
+            title: 'Error',
+            icon: 'error',
+            html: html,
+        });
+    </script>
+    {% endif %}
+    <!----------------------------------------------------->
+
+</body>
+
+</html>
+{% endblock %}

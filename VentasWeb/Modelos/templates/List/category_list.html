@@ -1,0 +1,35 @@
+{% extends 'list.html' %}
+
+{{ title }}
+
+{% block columns %}
+<tr id="tabla-titulo">
+    <th scope="col">Fecha Creado</th>
+    <th scope="col">Nro</th>
+    <th scope="col">Nombre</th>
+    <th scope="col"></th>
+</tr>
+{% endblock %}
+
+
+
+{% block rows %}
+
+{% for n in filtro %}
+
+<tr id="tabla-datos">
+    <td>{{ n.date_create | date:"d/m/Y"}}</td>
+    <td>{{ n.id}}</td>
+    <td>{{ n.name }}</td>
+    <td><a type="button" class="btn btn-primary" href="#"><i class="bi bi-pencil"></i></a>
+    <a type="button" class="btn btn-danger" href="#"><i class="bi bi-trash"></i></a></td>
+
+</tr>
+
+{% endfor %}
+
+{% endblock %}
+
+{% block buttom %}
+<a href="{{ url }}" class="btn btn-primary btn-flat btnTest"><i class="bi bi-plus"></i>Nuevo registro</a>
+{% endblock %}

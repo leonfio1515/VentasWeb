@@ -1,0 +1,63 @@
+#label-impresion {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(233, 241, 248, 0.7);
+    border: ridge;
+}
+
+
+#input-impresion {
+    text-align: center;
+}
+
+#div-genera-impresion {
+    background-color: rgb(185, 188, 192, 0.7);
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    line-height: 1px;
+    width: 300px;
+    margin-top: 50px;
+    border-radius: 25px;
+}
+
+#div-genera-impresion>h6 {
+    font-size: 12px;
+}
+
+#div-genera-impresion>h6>span {
+    font-weight: bold;
+    font-size: 16px;
+    width: 50px;
+}
+
+#div-genera-impresion>h5 {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#div-genera-impresion>h4 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#div-genera-impresion>p {
+    height: 25px;
+    overflow-wrap: break-word;
+    position: relative;
+    display: block;
+}
+
+#cuadro-info-reclamos {
+    background-color: rgb(229, 236, 243, 0.7);
+    border-radius: 25px;
+    box-shadow: 20px 10px rgba(62, 65, 65, 0.7);
+    border: groove;
+    padding-top: 10px;
+    margin-bottom: 45px;
+    height: 190px;
+    width: 95%;
+}

@@ -1,0 +1,284 @@
+main {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+
+.card-container {
+    width: 100%;
+    max-width: 100%;
+    height: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+/*---------------------------------CARD PROMO------------------------------*/
+.card-container .card-promo {
+    width: 165px;
+    height: 310px;
+    border-radius: 8px;
+    background: linear-gradient(rgba(143, 147, 158, 0.3), rgba(143, 147, 158, 0.3));
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.card-container .card-promo:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+}
+
+.card-container .card-promo img {
+    width: 165px;
+    height: 165px;
+    margin-bottom: 5px;
+    background-image: linear-gradient(rgba(118, 122, 133, 0.3), rgba(118, 122, 133, 0.3));
+}
+
+.card-container .card-promo h4 {
+    padding: 2px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.card-container .card-promo h5 {
+    padding: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 12px;
+    color: rgb(156, 0, 0);
+}
+
+.card-container .card-promo .th-card {
+    padding: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    line-height: 16px;
+    background-color: rgba(62, 69, 77, 0.5);
+    color: rgb(248, 201, 12);
+}
+
+.card-container .card-promo hr {
+    padding: 2px;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    line-height: 8px;
+}
+
+.card-container .card-promo p {
+    padding: 0 1rem;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.card-container .card-promo a {
+    font-weight: 500;
+    color: #3498db
+}
+
+/*---------------------------CARD NOTICIAS-------------------------------*/
+
+.card-container .card-noticia {
+    width: 165px;
+    height: 270px;
+    border-radius: 8px;
+    background: linear-gradient(rgba(143, 147, 158, 0.3), rgba(143, 147, 158, 0.3));
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.card-container .card-noticia:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+}
+
+.card-container .card-noticia img {
+    width: 165px;
+    height: 140px;
+    margin-bottom: 5px;
+    background-image: linear-gradient(rgba(118, 122, 133, 0.3), rgba(118, 122, 133, 0.3));
+}
+
+.card-container .card-noticia h4 {
+    padding: 2px;
+    height: 55px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+/* -------------------CARD MANUALES----------------------------------------------------- */
+.card-container .card-manuales {
+    width: 165px;
+    height: 270px;
+    border-radius: 8px;
+    background: linear-gradient(rgba(143, 147, 158, 0.3), rgba(143, 147, 158, 0.3));
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.card-container .card-manuales:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+}
+
+.card-container .card-manuales img {
+    width: 165px;
+    height: 165px;
+    margin-bottom: 5px;
+    background-image: linear-gradient(rgba(118, 122, 133, 0.3), rgba(118, 122, 133, 0.3));
+}
+
+.card-container .card-manuales h4 {
+    padding: 2px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.card-container .card-manuales h5 {
+    padding: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 12px;
+    color: rgb(156, 0, 0);
+}
+
+.card-container .card-manuales .th-card {
+    padding: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    line-height: 16px;
+    color: rgb(184, 153, 32);
+}
+
+.card-container .card-manuales hr {
+    padding: 2px;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    line-height: 8px;
+}
+
+.card-container .card-manuales p {
+    padding: 0 1rem;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.card-container .card-manuales a {
+    font-weight: 500;
+    color: #3498db
+}
+
+
+/*------------------------------BOTON----------------------*/
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+button.learn-more {
+    width: 10rem;
+    height: 3rem;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 2rem;
+    height: 3rem;
+    background: #dd6c2b;
+    border-radius: 1.6rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.2rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(0.5rem, 0);
+}
+
+button:hover .button-text {
+    color: rgb(253, 253, 253);
+}

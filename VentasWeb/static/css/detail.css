@@ -1,0 +1,29 @@
+#detail-title {
+    font-size: 26px;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#container-detail {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 25%;
+    width: 50%;
+    background-color: rgb(203, 221, 221, 0.5);
+}
+
+#titulo-detalle {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+#dato-detalle {
+    font-size: 14px;
+    color: black;
+}
+
+#hr-detalle {
+    margin-bottom: 2px;
+}

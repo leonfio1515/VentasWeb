@@ -1,0 +1,264 @@
+.list-title {
+    font-size: 26px;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.list-subtitle {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.list-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgb(203, 221, 221, 0.5);
+}
+
+.card-body-list {
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#no-enviado {
+    color: orangered;
+}
+
+#enviado {
+    color: rgb(4, 99, 4);
+}
+
+#autorizada {
+    color: rgb(4, 99, 4);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#no-autorizada {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#colList {
+    font-size: 16px;
+    color: orangered;
+}
+
+#colList-suc {
+    font-size: 16px;
+    color: rgb(17, 0, 255);
+}
+
+#dataList {
+    font-size: 14px;
+}
+
+#autPendiente {
+    color: rgb(247, 98, 44);
+    font-size: 16px;
+}
+
+#autSi {
+    color: rgb(16, 129, 12);
+    font-size: 16px;
+}
+
+#autNo {
+    color: black;
+    font-size: 16px;
+}
+
+#notificacion {
+    background-color: yellow;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: black;
+    font-size: 10px;
+    margin-left: 8px;
+}
+
+
+#tabla_length {
+    float: left;
+    position: flex;
+    align-items: flex-start;
+    text-align: left;
+    padding: 10px;
+    margin-left: 60px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    background-color: rgba(197, 235, 231, 0.6);
+}
+
+#tabla_filter {
+    float: right;
+    position: relative;
+    text-align: left;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-right: 60px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgba(197, 235, 231, 0.7);
+}
+
+
+#tabla_info {
+    float: right;
+    position: relative;
+    align-items: flex-end;
+    text-align: right;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-right: 60px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    background-color: rgba(197, 235, 231, 0.6);
+}
+
+#tabla-datos {
+    font-size: 12px;
+    background-color: rgba(220, 228, 235, 0.2);
+}
+
+#tabla-titulo {
+    font-size: 14px;
+    background-color: rgba(197, 235, 231, 0.7);
+    vertical-align: middle;
+}
+
+#tabla_paginate {
+    float: right;
+    position: relative;
+    align-items: flex-end;
+    text-align: right;
+    flex-wrap: wrap;
+    margin-right: 60px;
+}
+
+
+.dt-buttons {
+    float: left;
+    position: relative;
+    text-align: left;
+    width: 50px;
+    margin-left: 100px;
+    margin-top: 30px;
+    box-sizing: content-box;
+}
+
+#title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#img-proceso {
+    width: 80%;
+    height: 90%;
+}
+
+#subtitle {
+    float: left;
+    height: 100px;
+    width: 700px;
+    margin-left: 300px;
+    margin-bottom: 10px;
+    display: inline-flex;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+#subtitle>span {
+    background-color: rgb(240, 248, 255, 0.7);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+#subtitle2 {
+    background-color: rgba(204, 227, 247, 0.7);
+    font-weight: bold;
+    border-radius: 25px;
+    font-size: 16px;
+    float: left;
+    height: 20%;
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+
+#condiciones {
+    background-color: rgba(176, 214, 247, 0.5);
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    float: left;
+    border-radius: 25px;
+    margin-left: 20%;
+    height: 150px;
+    width: 33%;
+    padding-top: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+#condiciones2 {
+    background-color: rgba(236, 171, 87, 0.8);
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    border-radius: 25px;
+    height: 150px;
+    width: 33%;
+    padding-top: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+#tabla-suc {
+    margin-left: 20%;
+    width: 450px;
+    border-radius: 25px;
+}
+
+#boton-imagen {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    font-size: 12px;
+    width: 70px;
+    height: 70px;
+    size: 25px;
+}
+
+
+#autorizado {
+    color: rgb(4, 99, 4);
+    font-size: 16px;
+}
+
+#rechazado {
+    color: red;
+    font-size: 18px;
+}

@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+
+.body-container>* {
+    padding: 6px;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+#navbar {
+    grid-area: navbar;
+    background: #0a1d35;
+}
+
+#hero {
+    grid-area: main;
+    background: linear-gradient(rgba(5, 7, 12, 0.3), rgba(5, 7, 12, 0.3)), url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+}
+
+#hero:before {
+    content: "";
+    background: rgba(5, 13, 24, 0.3);
+    position: absolute;
+    bottom: 0;
+    top: 1;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+.body-container {
+    display: grid;
+    grid-template-areas:
+        "main"
+}
+
+@media (min-width: 900px) {
+    .body-container {
+        grid-template:
+            "main" 100% /
+            100%;
+    }
+}

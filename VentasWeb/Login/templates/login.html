@@ -1,0 +1,120 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'lib/adminlte-3.2.0/plugins/fontawesome-free/css/all.min.css' %}">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="{% static 'lib/adminlte-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'lib/adminlte-3.2.0/css/adminlte.min.css' %}">
+    <link href="{% static 'css/fondo.css' %}" rel="stylesheet">
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Fondo -->
+    <link href="{% static 'css/login.css' %}" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="#" rel="icon">
+
+</head>
+
+
+<body class="body-container hold-transition login-page">
+    <!-- ======= Fondo Section ======= -->
+    <div id="hero" class="d-flex flex-column justify-content-center align-items-center">
+        <div class="hero-container" data-aos="fade-in">
+
+            <div class="login-box">
+                <div class="login-logo" id="hero-login">
+                    <h2><strong style="color: rgb(187, 3, 3)">Inicio de Sesion</strong></h2>
+                </div>
+                <!-- /.login-logo -->
+                <div class="card">
+                    <div class="card-body login-card-body">
+
+                        <form action="." method="post">
+                            {% csrf_token %}
+                            <div class="input-group mb-3">
+                                {{ form.username|add_class:'form-control'|attr:'placeholder:Nombre de usuario' }}
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span class="fas fa-envelope"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                {{ form.password|add_class:'form-control'|attr:'placeholder:Contraseña' }}
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span class="fas fa-lock"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-lg-12">
+                                    <button type="submit" class="btn btn-primary btn-block"><i
+                                            class="fas fa-sign-in-alt"></i>
+                                        Iniciar sesion</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div><!-- End Fondo -->
+
+
+
+    <!-- jQuery -->
+    <script src="{% static 'lib/adminlte-3.2.0/plugins/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'lib/adminlte-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- AdminLTE App -->
+    <script src="{% static 'lib/adminlte-3.2.0/js/adminlte.min.js' %}"></script>
+
+
+    <script type="application/javascript"></script>
+
+    {% if form.errors %}
+    <script> var errors = "" 
+    </script>
+
+    {% for field in form %}
+    {% for error in field.errors %}
+    <script>errors = '{{ error }}';</script>
+    {% endfor %}
+    {% endfor %}
+
+    {% for error in form.non_field_errors %}
+    <script>errors = '{{ error }}';</script>
+    {% endfor %}
+
+
+    <script>
+        Swal.fire({
+            icon: 'error',
+            titleText: 'Error al ingresar',
+            text: errors,
+            confirmButtonText: 'OK',
+        });
+    </script>
+
+    {% endif %}
+
+
+</body>
+
+</html>

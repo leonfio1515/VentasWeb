@@ -1,0 +1,7 @@
+.pdfview {
+    margin: auto;
+    display: block;
+    width: 1280px;
+    height: 650px;
+    border-radius: 20px;
+}

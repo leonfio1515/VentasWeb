@@ -1,6 +1,18 @@
 function message_error(obj) {
-    $.each(obj, function (key, value) {
-        console.log(key);
-        console.log(value);
+    var html = '';
+    if (typeof(obj) === 'object') {
+        html = '<ul>';
+        $.each(obj, function (key, value) {
+            html += '<li>' + key + ': ' + value + '</li>';
+        });
+        html += '</ul>';
+    }
+    else{
+        html = '<p>'+obj+'</p>';
+    }
+        Swal.fire({
+        title: 'Error!',
+        html: html,
+        icon: 'error'
     });
 }

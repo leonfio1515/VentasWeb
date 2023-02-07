@@ -41,26 +41,6 @@
 
 
 
-<!----------------------SWAL ERRORES--------------------------------------->
-{% if form.errors %}
-    <script>
-        var errors = '';
-    </script>
-
-    {% for field in form %}
-        {% for error in field.errors %}
-            <script> errors += '{{ error }}'</script>
-        {% endfor %}
-    {% endfor %}
-<script>
-    Swal.fire({
-        title: 'Error!',
-        text: errors,
-        icon: 'error'
-    });
-</script>
-{% endif %}
-<!----------------------SWAL ERRORES--------------------------------------->
 
 
 <script>
@@ -77,7 +57,7 @@
                 location.href = '{{ url }}';
                 return false;
             }
-            message_error(data);
+            message_error(data.error);
         }).fail(function (jqXHR, textStatus, errorThrown) {
             alert(textStatus + ' - ' + errorThrown);
         }).always(function (data) {

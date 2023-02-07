@@ -67,10 +67,7 @@ class CategoryCreate(CreateView):
             action = request.POST['action']
             if action == 'add':
                 form = self.get_form()
-                if form.is_valid():
-                    form.save()
-                else:
-                    data['error'] = form.errors
+                data = form.save()
             else:
                 data['error'] = "No ha ingreado a ninguna opcion"
         except Exception as e:
@@ -82,6 +79,7 @@ class CategoryCreate(CreateView):
 
         context["title"] = "Crear Categoria"
         context["action"] = "add"
+        context["url"] = reverse_lazy('category_list')
 
         return context
 

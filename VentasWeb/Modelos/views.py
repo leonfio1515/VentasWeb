@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.http import JsonResponse
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, ListView, CreateView, UpdateView
+from django.views.generic import TemplateView, ListView, CreateView, UpdateView, DeleteView
 from .models import *
 from .forms import *
 
@@ -112,6 +112,20 @@ class CategoryUpdate(UpdateView):
 
         context["title"] = "Editar Categoria"
         context["action"] = "edit"
+        context["url"] = reverse_lazy('category_list')
+
+        return context
+
+
+class CategoryDelete(DeleteView):
+    model = Category
+    template_name = 'Delete/delete_category.html'
+    success_url = reverse_lazy("category_list")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context["title"] = "Eliminar Categoria"
         context["url"] = reverse_lazy('category_list')
 
         return context

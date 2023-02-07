@@ -40,15 +40,12 @@
 
 
 
-
-
-
 <script>
     $('#Form-form').on('submit', function (e) {
         e.preventDefault();
         var parameters = $(this).serializeArray();
         $.ajax({
-            url: '{% url "category_add" %}',
+            url: window.location.pathname,
             type: 'POST',
             data: parameters,
             dataType: 'json'

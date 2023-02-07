@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.http import JsonResponse
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, ListView, CreateView
+from django.views.generic import TemplateView, ListView, CreateView, UpdateView
 from .models import *
 from .forms import *
 
@@ -79,6 +79,39 @@ class CategoryCreate(CreateView):
 
         context["title"] = "Crear Categoria"
         context["action"] = "add"
+        context["url"] = reverse_lazy('category_list')
+
+        return context
+
+
+class CategoryUpdate(UpdateView):
+    model = Category
+    form_class = CategoryEditForm
+    template_name = 'Update/form_category_update.html'
+    success_url = reverse_lazy("category_list")
+
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
+    
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            action = request.POST['action']
+            if action == 'edit':
+                form = self.get_form()
+                data = form.save()
+            else:
+                data['error'] = "No ha ingreado a ninguna opcion"
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context["title"] = "Editar Categoria"
+        context["action"] = "edit"
         context["url"] = reverse_lazy('category_list')
 
         return context

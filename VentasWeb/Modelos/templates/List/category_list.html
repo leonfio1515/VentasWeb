@@ -21,7 +21,7 @@
     <td>{{ n.date_create | date:"d/m/Y"}}</td>
     <td>{{ n.id}}</td>
     <td>{{ n.name }}</td>
-    <td><a type="button" class="btn btn-primary" href="#"><i class="bi bi-pencil"></i></a>
+    <td><a type="button" class="btn btn-primary" href="{% url 'category_edit' n.id %}"><i class="bi bi-pencil"></i></a>
     <a type="button" class="btn btn-danger" href="#"><i class="bi bi-trash"></i></a></td>
 
 </tr>

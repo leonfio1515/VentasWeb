@@ -70,7 +70,7 @@ class CategoryCreate(CreateView):
                 if form.is_valid():
                     form.save()
                 else:
-                    data = form.errors
+                    data['error'] = form.errors
             else:
                 data['error'] = "No ha ingreado a ninguna opcion"
         except Exception as e:
@@ -84,3 +84,4 @@ class CategoryCreate(CreateView):
         context["action"] = "add"
 
         return context
+

@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'Login',
     'Modelos',
 
-
 ]
 
 MIDDLEWARE = [

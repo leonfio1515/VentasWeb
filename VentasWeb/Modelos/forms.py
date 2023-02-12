@@ -34,6 +34,13 @@ class CategoryForm(ModelForm):
             data["error"] = str(e)
         return data
     
+    def clean(self):
+        cleaned = super().clean()
+        if len(cleaned['name']) <= 5:
+            self.add_error("name", "El nombre es demasiado corto")
+        elif len(cleaned['name']) >= 15:
+            self.add_error("name", "El nombre es demasiado largo")
+        return cleaned
 
 
 class CategoryEditForm(ModelForm):
